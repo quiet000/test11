@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الألعاب</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            text-align: center;
+        }
+        .header {
+            background-color: #000000;
+            padding: 20px;
+        }
+        .logo {
+            width: 250px;
+        }
+        .tagline {
+            color: white;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .search-bar {
+            margin: 20px 0;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #3bf60d;
+            border-radius: 25px;
+            outline: none;
+            text-align: center;
+        }
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            padding: 25px;
+        }
+        .game {
+            background-color: #2a2d3b;
+            border: 2px solid #3bf60d;
+            border-radius: 17px;
+            padding: 2px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: fit-content;
+            margin: auto;
+            color: white;
+        }
+        .game:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .game a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .game img {
+            width: 90%;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+        }
+        .game p {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        @media (max-width: 1024px) {
+            .games-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .games-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    <script>
+        function searchGames() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let games = document.getElementsByClassName("game");
+            for (let i = 0; i < games.length; i++) {
+                let title = games[i].getElementsByTagName("p")[0].innerText.toLowerCase();
+                games[i].style.display = title.includes(input) ? "block" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="images/logo.png" alt="شعار الموقع" class="logo">
+        <h3 class="tagline">Unlock premium features, boost your progress, and elevate your experience effortlessly. اسم الموقع is your go-to tool for endless possibilities.</h3>
+    </div>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="ابحث هنا..." onkeyup="searchGames()">
+    </div>
+    <div class="games-container">
+        <div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/MonopolyGO.png" alt="MONOPOLY GO">
+                <p>MONOPOLY GO</p>
+            </a>
+        </div>
+        <div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/pokemon.png" alt="Pokémon GO">
+                <p>Pokémon GO</p>
+            </a>
+        </div>
+        <div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/SubwaySurfers.png" alt="Subway Surfers">
+                <p>Subway Surfers</p>
+            </a>
+        </div>
+        <div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/RoyalMatch.png" alt="Royal Match">
+                <p>Royal Match</p>
+            </a>
+        </div>
+        <div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/BlockBlast.png" alt="Block Blast!">
+                <p>Block Blast!</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/FreeFire.png" alt="Free Fire">
+                <p>Free Fire</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/TocaBocaWorld.png" alt="Toca Boca World">
+                <p>Toca Boca World</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/Roblox.png" alt="Roblox">
+                <p>Roblox</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/BrawlStars.png" alt="Brawl Stars">
+                <p>Brawl Stars</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/CoinMaster.png" alt="Coin Master">
+                <p>Coin Master</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/PUBGMOBILE.png" alt="PUBG MOBILE">
+                <p>PUBG MOBILE</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/Minecraft.png" alt="Minecraft">
+                <p>Minecraft</p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/EASPORTSFC™.png" alt="EA SPORTS FC™ ">
+                <p>EA SPORTS FC™ </p>
+            </a>
+        </div>
+		<div class="game">
+            <a href="https://www.remove.bg/upload" target="_blank">
+                <img src="images/Gardenscapes.png" alt="Gardenscapes">
+                <p>Gardenscapes</p>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+</body>
+</html>
